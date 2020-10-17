@@ -3,6 +3,8 @@ import subprocess
 import difflib
 import sqlite3
 import os.path
+import os
+
 i = 0
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 db_path = os.path.join(BASE_DIR, "formul.db")
@@ -28,7 +30,7 @@ V - объём
 """)
 update = input("Хотите ли вы обновить базу данных с формулами?(у/n")
 if (update == "y"):
-    subprocess_update = subprocess.run(["git pull", ""])
+    os.popen("git clone")
 while True:
     data = input(Fore.YELLOW + "Введите данные задачи через пробел.\n")
     conn , cursor = connect_db()
