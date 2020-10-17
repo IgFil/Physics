@@ -31,7 +31,7 @@ V - объём
 update = input("Хотите ли вы обновить базу данных с формулами?(у/n)\n")
 if (update == "y"):
     os.popen("git pull https://github.com/IgFil/Physics")
-    os.popen("clear")
+    os.system('cls' if os.name == 'nt' else 'clear')
     time.sleep(2)
 while True:
     data = input(Fore.YELLOW + "Введите данные задачи через пробел.\n")
