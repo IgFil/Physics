@@ -32,7 +32,6 @@ if (update == "y"):
     time.sleep(2)
 while True:
     data = input(Fore.YELLOW + "Введите данные задачи через пробел.[Первым то что вы хотите найти] \n").replace(' ','')
-    print(data)
     conn , cursor = connect_db()
     cursor.execute("SELECT * FROM formuls;")
     formuls = cursor.fetchall()
